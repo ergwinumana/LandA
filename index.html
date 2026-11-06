@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L&A Auto Glass | Fast Mobile Windshield Repair & Replacement — Greater Boston</title>
+<meta name="description" content="Next-day mobile auto glass repair & windshield replacement in Greater Boston. Certified technicians, ADAS recalibration included, direct insurance billing. Call (617) 938-1450.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2316181D'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='26' font-weight='900' fill='%23fff' text-anchor='middle'%3EL%26A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ Design tokens ============ */
+:root{
+  --onyx:#16181D; --onyx-2:#262A31; --onyx-deep:#0C0E11; --ink:#15171B;
+  --slate:#4B5057; --slate-2:#6F747B; --line:#E4E5E8; --tint:#F4F4F5;
+  --maroon:#6B0F1A; --maroon-2:#520B14; --maroon-lite:#D08A94;
+  --ok:#1B7F4D;
+  --disp:'Barlow Condensed',sans-serif; --body:'Barlow',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+html,body{overflow-x:clip}
+body{font:400 1rem/1.6 var(--body);color:var(--slate);background:#fff;padding-bottom:76px}
+::selection{background:var(--maroon);color:#fff}
+:focus-visible{outline:3px solid rgba(107,15,26,.45);outline-offset:2px}
+h1,h2,h3{color:var(--onyx)}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+.sec{padding-block:clamp(4rem,8vw,6.5rem)}
+.band{padding-block:clamp(4rem,8vw,6.5rem)}
+.band-onyx{background:var(--onyx);color:#B8BCC2}
+.band-tint{background:var(--tint)}
+.lucide{width:1.15em;height:1.15em;flex:none}
+
+/* Eyebrow accent dot */
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font:700 .78rem var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--maroon);margin-bottom:.9rem}
+.eyebrow::before{content:'';width:10px;height:10px;border-radius:50%;background:var(--maroon);box-shadow:0 0 0 3px rgba(107,15,26,.16);flex:none}
+.band-onyx .eyebrow{color:var(--maroon-lite)}
+.band-onyx .eyebrow::before{background:var(--maroon-lite);box-shadow:0 0 0 3px rgba(208,138,148,.18)}
+.h2{font:800 clamp(2rem,4.4vw,3.05rem)/1.02 var(--disp);text-transform:uppercase;letter-spacing:.01em}
+.lede{margin-top:1rem;max-width:52ch;font-size:1.05rem}
+
+/* ============ Buttons (skewed "velocity" motif) ============ */
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.6rem;font:700 .92rem var(--body);letter-spacing:.09em;text-transform:uppercase;border:2px solid transparent;cursor:pointer;transform:skewX(-8deg);transition:transform .18s,background .18s,color .18s,border-color .18s;white-space:nowrap}
+.btn>*{transform:skewX(8deg);display:inline-flex;align-items:center;gap:.55rem}
+.btn:hover{transform:skewX(-8deg) translateY(-2px)}
+.btn-maroon{background:var(--maroon);color:#fff}
+.btn-maroon:hover{background:var(--maroon-2)}
+.btn-onyx{background:var(--onyx);color:#fff}
+.btn-onyx:hover{background:var(--onyx-2)}
+.btn-ghost{border-color:var(--onyx);color:var(--onyx);background:transparent}
+.btn-ghost:hover{background:var(--onyx);color:#fff}
+.band-onyx .btn-ghost,.cta-band .btn-ghost{border-color:rgba(255,255,255,.65);color:#fff}
+.band-onyx .btn-ghost:hover,.cta-band .btn-ghost:hover{background:#fff;color:var(--onyx)}
+.link-quiet{font-weight:600;color:var(--onyx);text-decoration:underline;text-underline-offset:3px}
+.link-quiet:hover{color:var(--maroon)}
+
+/* ============ Topbar & Header ============ */
+.topbar{background:var(--onyx-deep);color:#9EA3AA;font-size:.8rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.45rem 0}
+.topbar b{color:#fff;font-weight:600}
+.topbar a{display:inline-flex;align-items:center;gap:.4rem;color:#fff;font-weight:600}
+.topbar .lucide{width:.95em;height:.95em;color:var(--maroon-lite)}
+.hdr{position:sticky;top:0;z-index:60;background:#fff;border-bottom:1px solid var(--line);transition:box-shadow .25s}
+.hdr.scrolled{box-shadow:0 10px 30px -16px rgba(12,14,17,.3)}
+.hdr .wrap{display:flex;align-items:center;gap:1.5rem;height:74px}
+.logo{display:flex;align-items:center;gap:.7rem;flex:none}
+.logo-mark{width:44px;height:44px;flex:none}
+.logo-txt{line-height:1.05}
+.logo-txt b{display:block;font:800 1.3rem var(--disp);letter-spacing:.03em;color:var(--onyx);text-transform:uppercase}
+.logo-txt span{display:block;font:600 .6rem var(--body);letter-spacing:.28em;color:var(--slate-2);text-transform:uppercase}
+.nav{display:none;margin-left:auto;gap:1.8rem}
+.nav a{font:600 .95rem var(--body);color:var(--ink);position:relative;padding:.3rem 0}
+.nav a::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--maroon);transform:scaleX(0);transform-origin:left;transition:transform .22s}
+.nav a:hover::after{transform:scaleX(1)}
+.hdr-actions{display:flex;align-items:center;gap:.7rem;margin-left:auto}
+.nav+.hdr-actions{margin-left:0}
+.hdr-call .long{display:none}
+.hdr-quote{display:none}
+.burger{display:grid;gap:5px;background:none;border:0;padding:10px;cursor:pointer}
+.burger span{width:24px;height:2.5px;background:var(--onyx);transition:.25s;border-radius:2px}
+body.menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.mnav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 24px 40px -20px rgba(12,14,17,.3);padding:1rem 4% 1.5rem}
+body.menu-open .mnav{display:block}
+.mnav a.mnav-link{display:block;padding:.85rem .25rem;font:700 1.25rem var(--disp);text-transform:uppercase;letter-spacing:.03em;color:var(--onyx);border-bottom:1px solid var(--line)}
+.mnav-actions{display:grid;gap:.7rem;margin-top:1.1rem}
+.mnav-actions .btn{justify-content:center}
+
+@media(min-width:1000px){
+  .nav{display:flex}
+  .burger{display:none}
+  .mnav{display:none!important}
+  .hdr-quote{display:inline-flex}
+  .hdr-call .long{display:inline}
+  .hdr-call .short{display:none}
+}
+@media(max-width:560px){.hdr-quote{display:none}.hdr-call{padding:.8rem 1rem}}
+
+/* ============ Hero ============ */
+.hero{padding:clamp(2.75rem,5vw,4.5rem) 0 clamp(3rem,6vw,5rem)}
+.hero-grid{display:grid;gap:2.75rem;align-items:center}
+.h1{font:800 clamp(2.6rem,6.2vw,4.5rem)/.96 var(--disp);text-transform:uppercase;letter-spacing:.005em;max-width:13ch}
+.h1 .hl{color:var(--maroon);font-style:italic}
+.hero-sub{margin-top:1.15rem;font-size:1.12rem;max-width:46ch}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.7rem}
+.badges{display:flex;flex-wrap:wrap;gap:.8rem 1.6rem;margin-top:1.8rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+.badges li{display:flex;align-items:center;gap:.5rem;font:600 .9rem var(--body);color:var(--ink)}
+.badges .lucide{color:var(--maroon)}
+
+/* Quote card */
+.quote-card{background:#fff;border:1.5px solid var(--line);border-top:4px solid var(--maroon);box-shadow:0 28px 56px -26px rgba(12,14,17,.32);max-width:480px;width:100%;justify-self:center}
+.qc-head{background:var(--onyx);color:#fff;padding:1.1rem 1.4rem}
+.qc-head b{display:block;font:800 1.45rem var(--disp);text-transform:uppercase;letter-spacing:.03em}
+.qc-head span{font-size:.82rem;color:#A6ABB2}
+#quoteForm,.qc-success{padding:1.4rem}
+.field{margin-bottom:1rem}
+.field label{display:block;font:600 .88rem var(--body);color:var(--ink);margin-bottom:.35rem}
+.field input{width:100%;padding:.78rem .9rem;font:500 1rem var(--body);color:var(--ink);border:1.5px solid var(--line);border-radius:6px;background:#fff;transition:border-color .15s,box-shadow .15s}
+.field input::placeholder{color:#9AA0A6}
+.field input:focus{outline:none;border-color:var(--onyx);box-shadow:0 0 0 3px rgba(21,23,27,.12)}
+.field.err input{border-color:var(--maroon)}
+.f-msg{display:none;font-size:.8rem;color:var(--maroon);margin-top:.3rem}
+.field.err .f-msg{display:block}
+.f-row{display:grid;gap:1rem}
+@media(min-width:560px){.f-row{grid-template-columns:1fr 1.4fr}}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.pills input{position:absolute;opacity:0;pointer-events:none}
+.pills label{padding:.55rem .95rem;border:1.5px solid var(--line);border-radius:999px;font:600 .88rem var(--body);color:var(--slate);cursor:pointer;transition:.15s}
+.pills label:hover{border-color:var(--onyx);color:var(--onyx)}
+.pills input:checked+label{background:var(--onyx);border-color:var(--onyx);color:#fff}
+.pills input:focus-visible+label{outline:3px solid rgba(107,15,26,.45);outline-offset:2px}
+.qc-fine{font-size:.78rem;color:var(--slate-2);margin-top:.75rem;text-align:center}
+.qc-success{text-align:center}
+.qc-success .lucide{width:44px;height:44px;color:var(--maroon);margin-bottom:.5rem}
+.qc-success b{display:block;font:800 1.5rem var(--disp);text-transform:uppercase;color:var(--onyx)}
+.qc-success p{margin:.5rem auto;max-width:34ch}
+.qc-success .btn{margin-top:.7rem}
+.qc-foot{display:flex;align-items:center;justify-content:center;gap:.45rem;background:var(--tint);padding:.7rem;font:600 .85rem var(--body);color:var(--ink)}
+.qc-foot .lucide{width:1em;height:1em;color:var(--maroon);fill:var(--maroon)}
+@media(min-width:1080px){
+  .hero-grid{grid-template-columns:1.08fr .92fr;gap:clamp(2rem,4vw,4rem)}
+  .quote-card{justify-self:end}
+}
+
+/* ============ Ticker ============ */
+.tick{background:var(--onyx-deep);color:#D9DBDE;border-block:1px solid rgba(255,255,255,.1);overflow:hidden}
+.tick-inner{display:flex;align-items:center;gap:2.4rem;width:max-content;padding:.85rem 0;animation:tick 32s linear infinite}
+.tick:hover .tick-inner{animation-play-state:paused}
+.tick-inner span{font:700 .85rem var(--disp);letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
+.dia{width:7px;height:7px;background:var(--maroon-lite);transform:rotate(45deg);flex:none}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ============ Services ledger ============ */
+.svc-grid{display:grid;gap:2.5rem}
+@media(min-width:1080px){
+  .svc-grid{grid-template-columns:350px 1fr;gap:4.5rem}
+  .svc-side{position:sticky;top:112px;align-self:start}
+}
+.svc{display:grid;grid-template-columns:auto auto 1fr;grid-template-areas:"num ic body" "num ic body";gap:.4rem 1.2rem;align-items:center;padding:1.6rem .8rem;border-bottom:1px solid var(--line);position:relative;transition:background .2s}
+.svc:first-child{border-top:1px solid var(--line)}
+.svc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--maroon);transform:scaleY(0);transition:transform .25s}
+.svc:hover{background:var(--tint)}
+.svc:hover::before{transform:scaleY(1)}
+.svc-num{grid-area:num;font:800 2.4rem/1 var(--disp);color:#D4D6D9;transition:color .2s}
+.svc:hover .svc-num{color:var(--maroon)}
+.svc-ic{grid-area:ic;width:52px;height:52px;border:1.5px solid var(--line);display:grid;place-items:center;color:var(--onyx);background:#fff}
+.svc-ic .lucide{width:24px;height:24px}
+.svc-body{grid-area:body;min-width:0}
+.svc-body h3{font:800 1.45rem var(--disp);text-transform:uppercase;letter-spacing:.02em;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.svc-tag{font:700 .62rem var(--body);letter-spacing:.14em;color:var(--maroon);border:1.5px solid var(--maroon);padding:.18rem .5rem;text-transform:uppercase}
+.svc-body p{margin-top:.3rem;max-width:56ch}
+
+/* ============ Insurance ============ */
+.ins-grid{display:grid;gap:3rem;align-items:center}
+.ins-ticks{margin-top:1.5rem;display:grid;gap:.75rem}
+.ins-ticks li{display:flex;gap:.7rem;align-items:flex-start;color:var(--slate)}
+.ins-ticks b{color:var(--ink)}
+.ins-ticks .lucide{width:22px;height:22px;padding:4px;border-radius:50%;background:var(--onyx);color:#fff;margin-top:.15rem}
+.carriers{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.6rem}
+.carriers li{border:1.5px solid var(--line);padding:.45rem .85rem;font:700 .82rem var(--body);letter-spacing:.06em;color:var(--slate);text-transform:uppercase;background:#fff}
+.ins-note{font-size:.82rem;color:var(--slate-2);margin-top:.8rem}
+.ins-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:1.1rem;margin-top:1.8rem}
+.claim-zone{background:var(--tint);padding:clamp(1.5rem,4vw,3rem);display:grid;place-items:center}
+.claim{position:relative;background:#fff;border:1.5px solid var(--line);box-shadow:10px 10px 0 var(--onyx);width:min(440px,100%);transform:rotate(1.5deg);padding:1.5rem 1.6rem}
+.claim-head{display:flex;justify-content:space-between;gap:1rem;font:700 .72rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--slate-2);padding-bottom:.9rem;border-bottom:2px solid var(--onyx)}
+.claim-head b{color:var(--onyx)}
+.claim-row{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 0;border-bottom:1px dashed var(--line);font-size:.92rem}
+.claim-row span{color:var(--slate-2)}
+.claim-row b{color:var(--ink);font-weight:600;text-align:right}
+.claim-row b.ok{color:var(--ok)}
+.claim-total{display:flex;justify-content:space-between;align-items:center;padding:.9rem 0 .2rem}
+.claim-total span{font:700 .78rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--slate-2)}
+.claim-total b{font:800 2.4rem var(--disp);color:var(--maroon)}
+.claim-stamp{position:absolute;right:1.1rem;bottom:3.4rem;transform:rotate(-8deg);border:2.5px solid var(--maroon);color:var(--maroon);font:800 .8rem var(--body);letter-spacing:.2em;text-transform:uppercase;padding:.4rem .7rem;opacity:.9;display:flex;align-items:center;gap:.4rem}
+.claim-note{font-size:.75rem;color:var(--slate-2);border-top:1px dashed var(--line);margin-top:.8rem;padding-top:.7rem}
+@media(min-width:1080px){.ins-grid{grid-template-columns:1.05fr .95fr;gap:4rem}}
+
+/* ============ Mobile service ============ */
+.mob-grid{display:grid;gap:2.75rem;align-items:center}
+.mob-ticks{margin-top:1.5rem;display:grid;gap:.75rem}
+.mob-ticks li{display:flex;gap:.7rem;align-items:flex-start}
+.mob-ticks .lucide{width:22px;height:22px;padding:4px;border-radius:50%;background:var(--maroon);color:#fff;margin-top:.15rem;flex:none}
+.avail{display:flex;gap:.9rem;align-items:center;background:#fff;border:1.5px solid var(--line);border-left:4px solid var(--maroon);padding:1rem 1.2rem;margin-top:1.6rem;max-width:480px}
+.pulse{position:relative;width:10px;height:10px;border-radius:50%;background:var(--maroon);flex:none}
+.pulse::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--maroon);animation:ping 1.6s ease-out infinite}
+@keyframes ping{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.25);opacity:0}}
+.avail b{display:block;color:var(--ink);font-size:.95rem}
+.avail span{font-size:.82rem;color:var(--slate-2)}
+.mob-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:1.1rem;margin-top:1.8rem}
+
+/* Photo slots — replace with your own photos */
+.photo-slot{position:relative;border:1.5px dashed #B9BDC2;background:repeating-linear-gradient(45deg,var(--tint) 0 12px,#EFEFF1 12px 24px);display:grid;place-content:center;text-align:center;gap:.55rem;padding:2rem;color:var(--slate-2)}
+.photo-slot .lucide{width:34px;height:34px;margin-inline:auto;color:#8B8F95}
+.photo-slot b{font:700 .78rem var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--onyx)}
+.photo-slot span{font-size:.85rem;max-width:30ch;margin-inline:auto}
+.photo-slot em{font-style:normal;font:600 .68rem var(--body);letter-spacing:.14em;text-transform:uppercase;color:#8B8F95}
+.slot-tag{position:absolute;top:10px;left:10px;background:var(--onyx);color:#fff;font:700 .6rem var(--body);letter-spacing:.18em;padding:.25rem .55rem;text-transform:uppercase}
+.mob-photo{aspect-ratio:4/3}
+@media(min-width:1080px){.mob-grid{grid-template-columns:1.02fr .98fr;gap:4rem}}
+
+/* ============ Why choose us ============ */
+.props{display:grid;margin-top:2.75rem;border:1.5px solid var(--line)}
+.prop{padding:clamp(1.6rem,3vw,2.4rem);border-bottom:1.5px solid var(--line)}
+.prop:last-child{border-bottom:0}
+.prop-ic{width:56px;height:56px;border:1.5px solid var(--line);display:grid;place-items:center;color:var(--maroon);margin-bottom:1.1rem}
+.prop-ic .lucide{width:26px;height:26px}
+.prop h3{font:800 1.4rem var(--disp);text-transform:uppercase;letter-spacing:.02em}
+.prop p{margin-top:.45rem}
+@media(min-width:720px){
+  .props{grid-template-columns:repeat(3,1fr)}
+  .prop{border-bottom:0;border-right:1.5px solid var(--line)}
+  .prop:last-child{border-right:0}
+}
+
+/* ============ Process ============ */
+.proc .h2{color:#fff}
+.steps{display:grid;gap:2.2rem;margin-top:3rem;position:relative}
+.step{position:relative;padding-left:74px}
+.step-n{position:absolute;left:0;top:0;width:54px;height:54px;border-radius:50%;border:2px solid rgba(255,255,255,.35);display:grid;place-items:center;font:800 1.3rem var(--disp);color:#fff;background:var(--onyx)}
+.step h3{color:#fff;font:800 1.45rem var(--disp);text-transform:uppercase;letter-spacing:.02em}
+.step p{margin-top:.4rem;color:#A6ABB2;max-width:40ch}
+@media(min-width:860px){
+  .steps{grid-template-columns:repeat(3,1fr);gap:2.5rem}
+  .steps::before{content:'';position:absolute;top:27px;left:9%;right:9%;border-top:2px dashed rgba(255,255,255,.22)}
+  .step{padding-left:0;padding-top:74px}
+  .step-n{top:0}
+}
+
+/* ============ Reviews ============ */
+.rev-grid{display:grid;gap:2.5rem;margin-top:2.5rem}
+@media(min-width:1080px){
+  .rev-grid{grid-template-columns:370px 1fr;gap:4.5rem;align-items:start}
+  .rev-panel{position:sticky;top:112px}
+}
+.rev-panel{background:var(--tint);border:1.5px solid var(--line);padding:2rem;text-align:center}
+.rev-score{font:800 4.6rem/1 var(--disp);color:var(--onyx)}
+.stars{position:relative;display:inline-block;height:26px;line-height:0;margin-top:.3rem}
+.stars-row{display:flex;gap:.15rem;justify-content:center}
+.stars-row .lucide{width:24px;height:24px;fill:#CFD2D6;stroke:#CFD2D6}
+.stars-fg{position:absolute;inset:0;overflow:hidden;white-space:nowrap}
+.stars-fg .stars-row{justify-content:flex-start}
+.stars-fg .lucide{fill:var(--maroon);stroke:var(--maroon)}
+.rev-panel>p{font-size:.92rem;margin-top:.6rem}
+.rev-chips{display:flex;justify-content:center;gap:.6rem;margin-top:1.2rem;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border:1.5px solid var(--line);padding:.45rem .8rem;font:700 .82rem var(--body);color:var(--ink)}
+.chip .lucide{width:.95em;height:.95em;fill:var(--maroon);stroke:var(--maroon)}
+.tst{padding:1.7rem 0;border-bottom:1px solid var(--line)}
+.tst:first-child{padding-top:0}
+.tst-q{width:30px;height:30px;color:var(--maroon);opacity:.85}
+.tst blockquote{font-size:1.12rem;line-height:1.55;color:var(--ink);margin-top:.4rem}
+.tst figcaption{margin-top:1rem;display:grid;gap:.15rem}
+.tst figcaption b{color:var(--onyx);font-weight:700}
+.tst figcaption>span{font-size:.85rem;color:var(--slate-2)}
+.vrf{font-style:normal;display:inline-flex;align-items:center;gap:.35rem;font:600 .78rem var(--body);color:var(--ok);margin-top:.3rem}
+.vrf .lucide{width:.95em;height:.95em}
+
+/* ============ About ============ */
+.about-grid{display:grid;gap:2.75rem;align-items:center}
+.about-photos{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.about-photos .photo-slot{aspect-ratio:3/4;padding:1.2rem}
+.about-photos .photo-slot:first-child{aspect-ratio:3/4.6}
+.about-photos .photo-slot b{font-size:.66rem;letter-spacing:.16em}
+.about-photos .photo-slot span{font-size:.76rem}
+.about-photos .photo-slot .lucide{width:26px;height:26px}
+.about-photos .photo-slot em{display:none}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 1rem;margin-top:2rem;border-top:1.5px solid var(--line);padding-top:1.6rem}
+.stat b{display:block;font:800 clamp(2rem,3.4vw,2.7rem)/1 var(--disp);color:var(--onyx)}
+.stat span{font:600 .72rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--slate-2)}
+@media(min-width:1080px){.about-grid{grid-template-columns:.95fr 1.05fr;gap:4.5rem}.stats{grid-template-columns:repeat(4,1fr)}}
+
+/* ============ FAQ ============ */
+.faq-grid{display:grid;gap:2.75rem}
+.faq-side-card{background:var(--tint);border:1.5px solid var(--line);padding:1.6rem;margin-top:1.8rem}
+.faq-side-card b{display:block;font:800 1.35rem var(--disp);text-transform:uppercase;color:var(--onyx)}
+.faq-side-card p{font-size:.92rem;margin:.4rem 0 1rem}
+.faq{border-bottom:1px solid var(--line)}
+.faq:first-child{border-top:1px solid var(--line)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1.2rem;background:none;border:0;padding:1.35rem .2rem;cursor:pointer;text-align:left;font:700 1.2rem var(--body);color:var(--onyx);transition:color .15s}
+.faq-q:hover{color:var(--maroon)}
+.faq-q .lucide{width:22px;height:22px;flex:none;transition:transform .3s;color:var(--maroon)}
+.faq.open .faq-q .lucide{transform:rotate(180deg)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.faq.open .faq-a{grid-template-rows:1fr}
+.faq-a>div{overflow:hidden}
+.faq-a p{padding:0 .2rem 1.4rem;max-width:62ch}
+@media(min-width:1080px){.faq-grid{grid-template-columns:370px 1fr;gap:4.5rem;align-items:start}.faq-side-wrap{position:sticky;top:112px}}
+
+/* ============ Final CTA band ============ */
+.cta-band{background:var(--onyx);position:relative;overflow:hidden;border-top:6px solid var(--maroon)}
+.cta-art{position:absolute;right:-6%;top:-12%;width:min(560px,55%);opacity:.07;pointer-events:none}
+.cta-grid{position:relative;display:grid;gap:2rem;align-items:center}
+.cta-grid .h2{color:#fff;max-width:16ch}
+.cta-grid .lede{color:#A6ABB2}
+.cta-btns{display:flex;flex-wrap:wrap;gap:.9rem}
+@media(min-width:900px){.cta-grid{grid-template-columns:1.3fr .7fr}.cta-btns{justify-content:flex-end}}
+
+/* ============ Footer ============ */
+.foot{background:var(--onyx-deep);color:#9EA3AA;padding:clamp(3rem,6vw,4.5rem) 0 0}
+.foot-grid{display:grid;gap:2.5rem}
+@media(min-width:900px){.foot-grid{grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:3rem}}
+.foot .logo-txt b{color:#fff}
+.foot h4{color:#fff;font:800 1.1rem var(--disp);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1rem}
+.foot p{font-size:.92rem}
+.foot-blurb{margin-top:1rem;max-width:34ch}
+.foot-lic{font-size:.78rem;margin-top:1.2rem;color:#787D84}
+.foot ul li{padding:.28rem 0;font-size:.94rem}
+.foot a:not(.logo):hover{color:var(--maroon-lite)}
+.foot-tel{display:inline-flex;align-items:center;gap:.5rem;font:800 1.5rem var(--disp);color:#fff!important;letter-spacing:.03em}
+.foot-tel .lucide{color:var(--maroon-lite)}
+.foot-bar{margin-top:3rem;border-top:1px solid rgba(255,255,255,.12);padding:1.2rem 0 1.4rem;display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;font-size:.8rem;align-items:center}
+.foot-bar button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.foot-bar button:hover{color:var(--maroon-lite)}
+.foot-bar .sep{color:#3E4247}
+
+/* ============ Mobile sticky action bar ============ */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:55;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+.mbar-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;height:62px;font:700 .95rem var(--body);letter-spacing:.06em;text-transform:uppercase}
+.mbar-call{background:var(--maroon);color:#fff}
+.mbar-quote{background:var(--onyx);color:#fff}
+@media(min-width:768px){.mbar{display:none}body{padding-bottom:0}}
+
+/* ============ Modal ============ */
+.modal{position:fixed;inset:0;z-index:100;display:none}
+.modal.open{display:grid;place-items:center}
+.modal-ov{position:absolute;inset:0;background:rgba(12,14,17,.62)}
+.modal-panel{position:relative;background:#fff;width:min(600px,92%);max-height:82vh;overflow:auto;padding:2.2rem;border-top:4px solid var(--maroon)}
+.modal-panel h3{font:800 1.8rem var(--disp);text-transform:uppercase}
+.modal-panel .mtime{font-size:.8rem;color:var(--slate-2);margin:.2rem 0 1rem}
+.modal-panel p{margin-bottom:.9rem;font-size:.94rem}
+.modal-x{position:absolute;top:.9rem;right:.9rem;background:none;border:1.5px solid var(--line);width:38px;height:38px;display:grid;place-items:center;cursor:pointer;color:var(--onyx)}
+.modal-x:hover{border-color:var(--maroon);color:var(--maroon)}
+
+/* ============ Reveal animation ============ */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease var(--d,0s),transform .6s ease var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+.skip{position:absolute;left:-9999px;top:0;background:var(--onyx);color:#fff;padding:.7rem 1.2rem;z-index:200}
+.skip:focus{left:0}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .tick-inner{animation:none}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ Top utility bar ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <span>Serving Greater Boston &middot; <b>Next-Day Mobile Service</b></span>
+    <a href="tel:+16179381450"><i data-lucide="phone"></i><b>(617) 938-1450</b>&nbsp;&middot;&nbsp;Mon–Sat</a>
+  </div>
+</div>
+
+<!-- ============ Header ============ -->
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="L&A Auto Glass — home">
+      <svg class="logo-mark" viewBox="0 0 44 44" aria-hidden="true">
+        <rect width="44" height="44" rx="9" fill="#16181D"/>
+        <text x="21" y="28.5" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="17" font-weight="800" fill="#fff">L&amp;A</text>
+        <circle cx="37.5" cy="7.5" r="4.5" fill="#6B0F1A" stroke="#fff" stroke-width="2"/>
+      </svg>
+      <span class="logo-txt"><b>L&amp;A Auto Glass</b><span>Greater Boston &middot; Mobile</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#insurance">Insurance</a>
+      <a href="#mobile">Mobile Service</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="hdr-actions">
+      <a class="btn btn-maroon hdr-call" href="tel:+16179381450"><span><i data-lucide="phone"></i><span class="long">Call Now: (617) 938-1450</span><span class="short">Call Now</span></span></a>
+      <a class="btn btn-onyx hdr-quote" href="#quote"><span>Get Instant Quote</span></a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <!-- Mobile navigation panel -->
+  <nav class="mnav" aria-label="Mobile">
+    <a class="mnav-link" href="#services">Services</a>
+    <a class="mnav-link" href="#insurance">Insurance</a>
+    <a class="mnav-link" href="#mobile">Mobile Service</a>
+    <a class="mnav-link" href="#reviews">Reviews</a>
+    <a class="mnav-link" href="#about">About</a>
+    <div class="mnav-actions">
+      <a class="btn btn-maroon" href="tel:+16179381450"><span><i data-lucide="phone"></i>Call Now: (617) 938-1450</span></a>
+      <a class="btn btn-onyx" href="#quote"><span>Get Instant Quote</span></a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ============ Hero + Quick Quote form ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <p class="eyebrow">Mobile Auto Glass &middot; Greater Boston</p>
+      <h1 class="h1">Fast, Mobile Auto Glass Repair <span class="hl">&amp; Windshield Replacement</span></h1>
+      <p class="hero-sub">We come to your home or office. Next-day service available, based on parts availability for your vehicle. We handle all insurance claims for you!</p>
+      <div class="hero-ctas">
+        <a class="btn btn-maroon" href="#quote"><span>Get a Free Quote<i data-lucide="arrow-right"></i></span></a>
+        <a class="btn btn-ghost" href="tel:+16179381450"><span><i data-lucide="phone"></i>Call (617) 938-1450</span></a>
+      </div>
+      <ul class="badges">
+        <li><i data-lucide="shield-check"></i>Certified Technicians</li>
+        <li><i data-lucide="file-check"></i>Direct Insurance Billing</li>
+      </ul>
+    </div>
+
+    <!-- Quick Quote lead form -->
+    <div class="quote-card reveal" id="quote" style="--d:.1s">
+      <div class="qc-head">
+        <b>Get Your Free Quote</b>
+        <span>30 seconds &middot; no obligation &middot; we reply in ~15 min</span>
+      </div>
+      <form id="quoteForm" novalidate>
+        <div class="field">
+          <label for="q-vehicle">Vehicle Year / Make / Model</label>
+          <input id="q-vehicle" name="vehicle" type="text" placeholder="e.g. 2019 Honda Accord" autocomplete="off">
+          <small class="f-msg">Please tell us your vehicle (e.g. 2019 Honda Accord).</small>
+        </div>
+        <div class="field">
+          <label id="glassLabel">What needs fixing?</label>
+          <div class="pills" role="radiogroup" aria-labelledby="glassLabel">
+            <input type="radio" name="glass" id="g1" value="Windshield" checked><label for="g1">Windshield</label>
+            <input type="radio" name="glass" id="g2" value="Side Window"><label for="g2">Side Window</label>
+            <input type="radio" name="glass" id="g3" value="Rear Glass"><label for="g3">Rear Glass</label>
+            <input type="radio" name="glass" id="g4" value="Side Mirrors"><label for="g4">Side Mirrors</label>
+            <input type="radio" name="glass" id="g5" value="Triangle/Quarter Glass"><label for="g5">Triangle/Quarter Glass</label>
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="field">
+            <label for="q-zip">Zip Code</label>
+            <input id="q-zip" name="zip" type="text" inputmode="numeric" maxlength="5" placeholder="02139">
+            <small class="f-msg">Enter a 5-digit zip code.</small>
+          </div>
+          <div class="field">
+            <label for="q-contact">Phone or Email</label>
+            <input id="q-contact" name="contact" type="text" placeholder="(617) 555-0148">
+            <small class="f-msg">Enter a valid phone number or email.</small>
+          </div>
+        </div>
+        <button class="btn btn-maroon" type="submit" style="width:100%;justify-content:center"><span>Get My Free Quote<i data-lucide="arrow-right"></i></span></button>
+        <p class="qc-fine">No spam, ever. We only use your info to quote your glass.</p>
+      </form>
+      <div class="qc-success" id="quoteSuccess" hidden aria-live="polite">
+        <i data-lucide="badge-check"></i>
+        <b>Request received!</b>
+        <p>Thanks — a glass specialist will call or text you within 15 minutes during business hours.</p>
+        <p>Need it fixed right now?</p>
+        <a class="btn btn-maroon" href="tel:+16179381450"><span><i data-lucide="phone"></i>Call (617) 938-1450</span></a>
+      </div>
+      <div class="qc-foot"><i data-lucide="star"></i> 4.9 average &middot; 480+ local reviews</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Trust ticker ============ -->
+<div class="tick" aria-hidden="true">
+  <div class="tick-inner" id="tickInner">
+    <span>Next-Day Mobile Service</span><i class="dia"></i>
+    <span>Certified Technicians</span><i class="dia"></i>
+    <span>Direct Insurance Billing</span><i class="dia"></i>
+    <span>ADAS Calibration Included</span><i class="dia"></i>
+    <span>Mobile Service At No Extra Charge</span><i class="dia"></i>
+  </div>
+</div>
+
+<!-- ============ Services ============ -->
+<section class="sec" id="services">
+  <div class="wrap svc-grid">
+    <div class="svc-side reveal">
+      <p class="eyebrow">Services</p>
+      <h2 class="h2">Every pane, handled right.</h2>
+      <p class="lede">From a cracked windshield to a fully shattered door glass — one call covers it. OEM &amp; OEE glass, factory-correct adhesives, and a tech who treats your car like their own.</p>
+      <div class="ins-ctas" style="margin-top:1.6rem">
+        <a class="btn btn-onyx" href="#quote"><span>Get a Free Quote</span></a>
+        <a class="link-quiet" href="tel:+16179381450">or call (617) 938-1450</a>
+      </div>
+    </div>
+    <div class="svc-list">
+      <article class="svc reveal">
+        <span class="svc-num">01</span>
+        <span class="svc-ic"><i data-lucide="car"></i></span>
+        <div class="svc-body">
+          <h3>Windshield Replacement <span class="svc-tag">Most requested</span></h3>
+          <p>OEM &amp; OEE glass installed to factory spec — with ADAS safety-camera recalibration included on every job, not tacked on as an upsell.</p>
+        </div>
+      </article>
+      <article class="svc reveal" style="--d:.06s">
+        <span class="svc-num">02</span>
+        <span class="svc-ic"><i data-lucide="truck"></i></span>
+        <div class="svc-body">
+          <h3>Mobile Service</h3>
+          <p>We bring the repair shop to your driveway, office, or curb — anywhere in Greater Boston, at no extra charge. You don't lift a finger.</p>
+        </div>
+      </article>
+      <article class="svc reveal" style="--d:.12s">
+        <span class="svc-num">03</span>
+        <span class="svc-ic"><i data-lucide="layers"></i></span>
+        <div class="svc-body">
+          <h3>Side &amp; Rear Glass Replacement</h3>
+          <p>Shattered door or back glass? Precise installation plus a full vacuum cleanup of every last shard — car seats included.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Insurance ============ -->
+<section class="sec" id="insurance">
+  <div class="wrap ins-grid">
+    <div class="reveal">
+      <p class="eyebrow">Insurance</p>
+      <h2 class="h2">Zero-deductible assistance. We fight the paperwork — not you.</h2>
+      <p class="lede">Glass is covered under the comprehensive portion of nearly every auto policy, and most carriers treat it as a routine, no-fault claim. Our office handles the whole thing while your car is still parked.</p>
+      <ul class="ins-ticks">
+        <li><i data-lucide="check"></i><span><b>We verify your coverage in minutes</b> — free, before any work is scheduled.</span></li>
+        <li><i data-lucide="check"></i><span><b>We file the claim and bill the carrier directly.</b> No adjusters, no fax machines, no hold music.</span></li>
+        <li><i data-lucide="check"></i><span><b>Many glass claims carry a $0 or waived deductible.</b> If yours does, you pay nothing.</span></li>
+      </ul>
+      <ul class="carriers">
+        <li>State Farm</li><li>GEICO</li><li>Progressive</li><li>Allstate</li>
+        <li>Liberty Mutual</li><li>Travelers</li><li>Nationwide</li><li>USAA</li>
+      </ul>
+      <p class="ins-note">+ every major carrier. If your insurer isn't listed, call us — we almost certainly work with them.</p>
+      <div class="ins-ctas">
+        <a class="btn btn-maroon" href="tel:+16179381450"><span><i data-lucide="phone"></i>Call — We'll Check Your Coverage</span></a>
+        <a class="link-quiet" href="#quote">or send the quote form</a>
+      </div>
+    </div>
+    <div class="claim-zone reveal" style="--d:.1s">
+      <div class="claim" aria-label="Example insurance claim summary">
+        <div class="claim-head"><span>Glass Claim Summary</span><b>L&amp;A Auto Glass</b></div>
+        <div class="claim-row"><span>Carrier</span><b>State Farm</b></div>
+        <div class="claim-row"><span>Coverage</span><b>Comprehensive — glass</b></div>
+        <div class="claim-row"><span>Deductible</span><b class="ok">Waived — $0</b></div>
+        <div class="claim-row"><span>Your paperwork</span><b>None — we file it</b></div>
+        <div class="claim-total"><span>You pay</span><b>$0.00</b></div>
+        <div class="claim-stamp"><i data-lucide="check"></i>Direct Bill</div>
+        <p class="claim-note">Example based on a typical MA comprehensive policy. We verify yours before any work begins — no surprises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Mobile service ============ -->
+<section class="sec band-tint" id="mobile">
+  <div class="wrap mob-grid">
+    <div class="reveal">
+      <p class="eyebrow">Mobile Service</p>
+      <h2 class="h2">The shop comes to you.</h2>
+      <p class="lede">Home, office, gym parking lot — our fully stocked mobile units handle 90% of jobs curbside. All we need is roughly a parking space and ninety minutes.</p>
+      <ul class="mob-ticks">
+        <li><i data-lucide="check"></i><span><b>Anywhere in Greater Boston</b> — zero travel fees, ever.</span></li>
+        <li><i data-lucide="check"></i><span><b>OEM &amp; OEE glass stocked on every unit</b> — next-day service for most vehicles, subject to parts availability.</span></li>
+        <li><i data-lucide="check"></i><span><b>Rain or shine</b> — carport or garage work is no problem.</span></li>
+        <li><i data-lucide="check"></i><span><b>Full cleanup included</b> — we vacuum every shard before we leave.</span></li>
+      </ul>
+      <div class="avail">
+        <span class="pulse" aria-hidden="true"></span>
+        <div><b>Next-day mobile slots open</b><span>Call today to reserve — final scheduling depends on glass availability for your vehicle.</span></div>
+      </div>
+      <div class="mob-ctas">
+        <a class="btn btn-maroon" href="tel:+16179381450"><span><i data-lucide="phone"></i>Book a Mobile Visit</span></a>
+        <a class="link-quiet" href="#quote">or get a quote first</a>
+      </div>
+    </div>
+    <!-- PHOTO SLOT: replace this whole div with <img src="your-van-photo.jpg" alt="L&A service van at a customer's driveway"> -->
+    <div class="photo-slot mob-photo reveal" style="--d:.1s">
+      <span class="slot-tag">Your photo here</span>
+      <i data-lucide="image"></i>
+      <b>Service Van Photo</b>
+      <span>Suggested: your van at a customer's driveway, tech unloading glass</span>
+      <em>Replace this box with your &lt;img&gt;</em>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Why choose us ============ -->
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Why L&amp;A</p>
+      <h2 class="h2">Why drivers hand us their keys.</h2>
+      <p class="lede">Auto glass is a safety system, not an accessory. Everything below is standard on every job — because "standard" is how we'd want it on our own cars.</p>
+    </div>
+    <div class="props reveal" style="--d:.08s">
+      <div class="prop">
+        <div class="prop-ic"><i data-lucide="circle-dollar-sign"></i></div>
+        <h3>Zero-Deductible Insurance Assistance</h3>
+        <p>We work directly with State Farm, GEICO, Progressive, Allstate and every major carrier. Most glass claims end up costing you exactly $0 — and you never fill out a claim form.</p>
+      </div>
+      <div class="prop">
+        <div class="prop-ic"><i data-lucide="camera"></i></div>
+        <h3>ADAS Calibration Included</h3>
+        <p>Lane-keep and emergency-braking cameras recalibrated to factory spec with every windshield replacement. No third-party referral, no surprise invoice.</p>
+      </div>
+      <div class="prop">
+        <div class="prop-ic"><i data-lucide="timer"></i></div>
+        <h3>Next-Day Service</h3>
+        <p>Most jobs are scheduled for the next business day. Because we fit the correct glass for your exact vehicle, timing depends on parts availability — we confirm your appointment window before booking, so there are no surprises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ How it works ============ -->
+<section class="band band-onyx proc">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">How It Works</p>
+      <h2 class="h2">Three steps. Zero hassle.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step-n">1</span>
+        <h3>Request a Free Quote or Call Us</h3>
+        <p>Send the 30-second form or call (617) 938-1450 — we price your glass on the spot. No hidden fees, no "come in for an inspection."</p>
+      </div>
+      <div class="step reveal" style="--d:.1s">
+        <span class="step-n">2</span>
+        <h3>We Confirm Insurance &amp; Schedule</h3>
+        <p>We verify your coverage, file the claim for you, and schedule your mobile visit around glass availability for your vehicle — home or office.</p>
+      </div>
+      <div class="step reveal" style="--d:.2s">
+        <span class="step-n">3</span>
+        <h3>Fast On-Site Repair &amp; Drive Away</h3>
+        <p>Our tech installs in 60–90 minutes, vacuums every shard, and hands you your exact safe drive-away time in writing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Reviews ============ -->
+<section class="sec" id="reviews">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Reviews</p>
+      <h2 class="h2">4.9 stars. 480+ neighbors.</h2>
+      <p class="lede">We don't run ads claiming trust — our customers do it for us, review by review.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-panel reveal">
+        <div class="rev-score">4.9</div>
+        <div class="stars" role="img" aria-label="Rated 4.9 out of 5 stars">
+          <div class="stars-row"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+          <div class="stars-fg" style="width:98%"><div class="stars-row"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div></div>
+        </div>
+        <p>Based on <b>480+ verified reviews</b> across Google &amp; Yelp</p>
+        <div class="rev-chips">
+          <span class="chip"><i data-lucide="star"></i>Google &middot; 4.9</span>
+          <span class="chip"><i data-lucide="star"></i>Yelp &middot; 4.9</span>
+        </div>
+      </div>
+      <div>
+        <figure class="tst reveal">
+          <i data-lucide="quote" class="tst-q"></i>
+          <blockquote>“Cracked at 8 AM, replaced by 1 PM — in my office parking lot in Kendall Square. They dealt with my insurance directly and I literally signed one piece of paper.”</blockquote>
+          <figcaption><b>Marissa T.</b><span>Cambridge, MA &middot; Windshield Replacement</span><em class="vrf"><i data-lucide="badge-check"></i>Verified Google review</em></figcaption>
+        </figure>
+        <figure class="tst reveal" style="--d:.08s">
+          <i data-lucide="quote" class="tst-q"></i>
+          <blockquote>“Someone broke my rear glass overnight. They had a match the next day, replaced it in my driveway, and vacuumed every shard out of the trunk and car seats. You'd never know it happened.”</blockquote>
+          <figcaption><b>Dan O.</b><span>Quincy, MA &middot; Rear Glass Replacement</span><em class="vrf"><i data-lucide="badge-check"></i>Verified Google review</em></figcaption>
+        </figure>
+        <figure class="tst reveal" style="--d:.16s">
+          <i data-lucide="quote" class="tst-q"></i>
+          <blockquote>“GEICO covered everything and my deductible ended up waived. On time, spotless work, and they walked me through the camera recalibration before leaving.”</blockquote>
+          <figcaption><b>Priya S.</b><span>Somerville, MA &middot; Windshield + ADAS</span><em class="vrf"><i data-lucide="badge-check"></i>Verified Yelp review</em></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ About ============ -->
+<section class="sec band-tint" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photos reveal">
+      <!-- PHOTO SLOT: replace with <img src="your-team-photo.jpg" alt="The L&A Auto Glass team"> -->
+      <div class="photo-slot">
+        <span class="slot-tag">Your photo</span>
+        <i data-lucide="users"></i>
+        <b>Team Photo</b>
+        <span>Your team with the service van</span>
+      </div>
+      <!-- PHOTO SLOT: replace with <img src="your-shop-photo.jpg" alt="Inside the L&A shop"> -->
+      <div class="photo-slot">
+        <span class="slot-tag">Your photo</span>
+        <i data-lucide="image"></i>
+        <b>Shop Photo</b>
+        <span>Glass racks &amp; work bay</span>
+      </div>
+    </div>
+    <div class="reveal" style="--d:.1s">
+      <p class="eyebrow">About Us</p>
+      <h2 class="h2">One standard: done right the first time.</h2>
+      <p class="lede">Every technician is certified and every phone call is answered by a person — not a phone tree. No job is finished until it's one we'd put our own family behind.</p>
+      <div class="stats">
+        <div class="stat"><b><span data-count="9" data-suf="+">0</span></b><span>Years on the road</span></div>
+        <div class="stat"><b><span data-count="12400" data-suf="+">0</span></b><span>Glass installs</span></div>
+        <div class="stat"><b><span data-count="4.9" data-dec="1">0</span></b><span>Average rating</span></div>
+        <div class="stat"><b><span data-count="98" data-suf="%">0</span></b><span>Would recommend</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-side-wrap reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="h2">Straight answers.</h2>
+      <p class="lede">The four questions every customer asks — answered honestly, before you even call.</p>
+      <div class="faq-side-card">
+        <b>Still unsure?</b>
+        <p>Call us and a human picks up — happy to talk through your specific car and coverage.</p>
+        <a class="btn btn-maroon" href="tel:+16179381450"><span><i data-lucide="phone"></i>(617) 938-1450</span></a>
+      </div>
+    </div>
+    <div class="reveal" style="--d:.08s">
+      <div class="faq open">
+        <button class="faq-q" aria-expanded="true">Does insurance cover windshield replacement?<i data-lucide="chevron-down"></i></button>
+        <div class="faq-a"><div><p>In almost every case, yes — glass is covered under the comprehensive portion of your auto policy, and Massachusetts carriers treat windshield replacement as a routine claim. Many policies even waive the deductible for glass. Call us with your insurance card handy: we'll verify your coverage in minutes, file the claim for you, and bill the carrier directly. You never deal with an adjuster or a fax machine.</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false">How long does windshield replacement take?<i data-lucide="chevron-down"></i></button>
+        <div class="faq-a"><div><p>The replacement itself takes 60–90 minutes. Add ADAS camera recalibration where your vehicle needs it, and you're usually looking at about two hours door to door — done in your driveway or at our shop, your choice.</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false">Can I drive my car immediately after the windshield is replaced?<i data-lucide="chevron-down"></i></button>
+        <div class="faq-a"><div><p>Not immediately — the urethane adhesive that bonds your windshield needs time to cure before the glass is structurally safe. We use premium fast-cure adhesives, so the safe drive-away time is typically about one hour (it varies with temperature and humidity). Your technician will give you the exact time before leaving, and we put it in writing on your invoice.</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false">What is ADAS calibration — and do I need it?<i data-lucide="chevron-down"></i></button>
+        <div class="faq-a"><div><p>If your car has lane-keep assist, automatic emergency braking, or a front camera, that camera is usually mounted to the windshield. Removing the glass can shift its aim by a fraction of a degree — enough to compromise the whole safety system. Recalibration restores factory accuracy. If your vehicle needs it, we include it with every replacement — no third-party referral, no extra invoice.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Final CTA banner ============ -->
+<section class="band cta-band">
+  <svg class="cta-art" viewBox="0 0 900 480" aria-hidden="true">
+    <path d="M118 372 C 96 300, 104 190, 168 128 C 320 76, 580 76, 732 128 C 796 190, 804 300, 782 372 C 630 402, 270 402, 118 372 Z"
+          fill="none" stroke="#fff" stroke-width="10"/>
+  </svg>
+  <div class="wrap cta-grid">
+    <div class="reveal">
+      <h2 class="h2">Cracked windshield? Don't wait — get it fixed today.</h2>
+      <p class="lede">Next-day appointments, confirmed based on parts availability. Call now or send a quote request — we'll verify your glass and lock in your window.</p>
+    </div>
+    <div class="cta-btns reveal" style="--d:.1s">
+      <a class="btn btn-maroon" href="tel:+16179381450"><span><i data-lucide="phone"></i>Call (617) 938-1450</span></a>
+      <a class="btn btn-ghost" href="#quote"><span>Get a Free Quote</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="logo" href="#top" aria-label="L&A Auto Glass — back to top">
+        <svg class="logo-mark" viewBox="0 0 44 44" aria-hidden="true">
+          <rect width="44" height="44" rx="9" fill="#fff"/>
+          <text x="21" y="28.5" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="17" font-weight="800" fill="#16181D">L&amp;A</text>
+          <circle cx="37.5" cy="7.5" r="4.5" fill="#6B0F1A" stroke="#fff" stroke-width="2"/>
+        </svg>
+        <span class="logo-txt"><b>L&amp;A Auto Glass</b><span>Greater Boston &middot; Mobile</span></span>
+      </a>
+      <p class="foot-blurb">Family-owned mobile auto glass service. Windshield replacement, side &amp; rear glass, and ADAS calibration — done right the first time, wherever you're parked.</p>
+      <p class="foot-lic">MA Auto Glass Contractor Lic. #AG-44712<br>Fully licensed &amp; insured</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a class="foot-tel" href="tel:+16179381450"><i data-lucide="phone"></i>(617) 938-1450</a></li>
+        <li><a href="mailto:service@laautoglass.com">service@laautoglass.com</a></li>
+        <li style="margin-top:.6rem">Mobile-first — we come to you.<br>Shop service by appointment.</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <ul>
+        <li>Mon – Fri &middot; 8:00 AM – 6:00 PM</li>
+        <li>Saturday &middot; 8:00 AM – 4:00 PM</li>
+        <li>Sunday &middot; Closed</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Service Areas</h4>
+      <ul>
+        <li>Boston &middot; Cambridge &middot; Somerville</li>
+        <li>Quincy &middot; Brookline &middot; Newton</li>
+        <li>Medford &middot; Malden &middot; Arlington</li>
+        <li>Waltham &middot; Dedham &middot; Chelsea</li>
+        <li style="color:#fff;font-weight:600">+ all of Greater Boston</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bar">
+    <span>&copy; <span id="yr"></span> L&amp;A Auto Glass LLC. All rights reserved.</span>
+    <span class="sep">|</span>
+    <button data-privacy>Privacy Policy</button>
+    <span class="sep">|</span>
+    <span>MA Lic. #AG-44712 &middot; Registered &amp; Insured</span>
+  </div>
+</footer>
+
+<!-- ============ Mobile sticky action bar ============ -->
+<div class="mbar" aria-label="Quick actions">
+  <a class="mbar-btn mbar-call" href="tel:+16179381450"><i data-lucide="phone"></i>Call Now</a>
+  <a class="mbar-btn mbar-quote" href="#quote"><i data-lucide="arrow-right"></i>Free Quote</a>
+</div>
+
+<!-- ============ Privacy policy modal ============ -->
+<div class="modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+  <div class="modal-ov" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-x" data-close aria-label="Close privacy policy"><i data-lucide="x"></i></button>
+    <h3 id="pmTitle">Privacy Policy</h3>
+    <p class="mtime">Last updated: January 2025</p>
+    <p><b>What we collect.</b> When you request a quote, we collect only the information you give us: your vehicle details, zip code, and a phone number or email so we can respond.</p>
+    <p><b>How we use it.</b> Your information is used solely to prepare your quote, schedule service, and process insurance claims you authorize. We never sell, rent, or share your information with marketers.</p>
+    <p><b>Insurance information.</b> Details you provide for a claim are shared only with your insurance carrier and our billing team, strictly to complete the work you approved.</p>
+    <p><b>Your choices.</b> Ask us anytime to update or delete your information by calling (617) 938-1450 or emailing service@laautoglass.com.</p>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>
+lucide.createIcons();
+
+/* Header shadow on scroll */
+const hdr = document.getElementById('hdr');
+addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 10), {passive:true});
+
+/* Mobile menu */
+const burger = document.getElementById('burger');
+burger.addEventListener('click', () => {
+  const open = document.body.classList.toggle('menu-open');
+  burger.setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('.mnav a').forEach(a => a.addEventListener('click', () => {
+  document.body.classList.remove('menu-open');
+  burger.setAttribute('aria-expanded', 'false');
+}));
+
+/* Focus the first form field whenever a #quote CTA is used */
+document.querySelectorAll('a[href="#quote"]').forEach(a =>
+  a.addEventListener('click', () => setTimeout(() => {
+    const f = document.getElementById('q-vehicle');
+    if (f) f.focus({preventScroll:true});
+  }, 500))
+);
+
+/* Scroll-reveal */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold:.12, rootMargin:'0px 0px -40px'});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* Count-up stats */
+function countUp(el){
+  const target = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0), suf = el.dataset.suf || '';
+  const t0 = performance.now(), D = 1400;
+  (function fr(t){
+    const p = Math.min(1, (t - t0) / D), e = 1 - Math.pow(1 - p, 3), v = target * e;
+    el.textContent = v.toFixed(dec).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + suf;
+    if (p < 1) requestAnimationFrame(fr);
+  })(t0);
+}
+const cio = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { countUp(e.target); cio.unobserve(e.target); }
+}), {threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+/* FAQ accordion */
+document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', () => {
+  const item = btn.parentElement, open = item.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}));
+
+/* Quote form validation + success state */
+const form = document.getElementById('quoteForm');
+const fields = ['q-vehicle', 'q-zip', 'q-contact'].map(id => document.getElementById(id));
+fields.forEach(el => el.addEventListener('input', () => el.closest('.field').classList.remove('err')));
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const bad = [];
+  const mark = (el, isBad) => { el.closest('.field').classList.toggle('err', isBad); if (isBad) bad.push(el); };
+  const contact = document.getElementById('q-contact').value.trim();
+  mark(fields[0], fields[0].value.trim().length < 4);
+  mark(fields[1], !/^\d{5}$/.test(fields[1].value.trim()));
+  mark(fields[2], !/^[\d\s()+.\-]{7,}$/.test(contact) && !/^\S+@\S+\.\S+$/.test(contact));
+  if (bad.length) { bad[0].focus(); return; }
+  form.hidden = true;
+  document.getElementById('quoteSuccess').hidden = false;
+});
+
+/* Privacy modal */
+const modal = document.getElementById('privacyModal');
+document.querySelectorAll('[data-privacy]').forEach(b => b.addEventListener('click', () => {
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}));
+modal.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => {
+  modal.classList.remove('open'); document.body.style.overflow = '';
+}));
+addEventListener('keydown', e => {
+  if (e.key === 'Escape' && modal.classList.contains('open')) {
+    modal.classList.remove('open'); document.body.style.overflow = '';
+  }
+});
+
+/* Duplicate ticker content for a seamless loop */
+const tick = document.getElementById('tickInner');
+tick.innerHTML += tick.innerHTML;
+
+/* Footer year */
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
